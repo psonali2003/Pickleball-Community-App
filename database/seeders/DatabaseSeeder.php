@@ -11,10 +11,12 @@ public function run()
 {
     
     $this->call([
+                
         UsersTableSeeder::class,
         PostsTableSeeder::class,
         CommentsTableSeeder::class,
         EventsTableSeeder::class, 
+                
     ]);
     
 }
