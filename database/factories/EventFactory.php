@@ -12,11 +12,13 @@ class EventFactory extends Factory
     public function definition()
     {
         return [
+            
             'user_id' => User::factory(), 
             'title' => $this->faker->sentence,
             'description' => $this->faker->paragraph,
             'date' => $this->faker->dateTimeBetween('+1 week', '+1 month'),
             'location' => $this->faker->address,
+            
         ];
     }
 }
