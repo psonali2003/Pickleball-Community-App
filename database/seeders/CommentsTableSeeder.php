@@ -11,9 +11,12 @@ class CommentsTableSeeder extends Seeder
     public function run()
     {
         Post::all()->each(function ($post) {
+            
             Comment::factory()->count(3)->create([
+                                                 
                 'post_id' => $post->id,
                 'user_id' => $post->user_id,
+                                                 
             ]);
         });
     }
