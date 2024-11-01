@@ -9,6 +9,7 @@ return new class extends Migration
 
     public function up()
     {
+        
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
@@ -16,6 +17,7 @@ return new class extends Migration
             $table->text('body');
             $table->timestamps();
         });
+        
     }
  
 };
